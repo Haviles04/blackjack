@@ -21,10 +21,10 @@ vector<card> deck;
 vector<card> player_hand;
 vector<card> dealer_hand;
 string playerMove();
+string getCardName(int suit, int rank);
 void initialize();
 void update();
 void printHands();
-string getCardName(int suit, int rank);
 
 int randomNum(int i)
 {
