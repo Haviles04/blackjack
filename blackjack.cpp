@@ -39,6 +39,20 @@ int main()
     return 0;
 }
 
+void initialize()
+{
+    makeDeck();
+    dealCards(player_hand, 2);
+    dealCards(dealer_hand, 2);
+    return;
+}
+
+void update()
+{
+    printHands();
+    playerMove();
+}
+
 string playerMove()
 {
     string playerChoice;
@@ -70,19 +84,6 @@ void dealCards(vector<card> &hand, int count)
     return;
 }
 
-void initialize()
-{
-    makeDeck();
-    dealCards(player_hand, 2);
-    dealCards(dealer_hand, 2);
-    return;
-}
-
-void update()
-{
-    printHands();
-    playerMove();
-}
 
 string getCardName(int suit, int rank)
 {
