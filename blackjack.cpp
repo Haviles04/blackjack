@@ -104,8 +104,14 @@ void playerMove()
     if (playerChoice == "hit")
     {
         dealCards(player_hand, 1);
+        if (sumCards(player_hand) > 21)
+        {
+            gameOver = true;
+            winner = "the dealer";
+        }
     }
-    else if(playerChoice == "stand"){
+    else if (playerChoice == "stand")
+    {
         gameOver = true;
     }
     else
@@ -114,7 +120,6 @@ void playerMove()
         winner = "the dealer";
         return;
     }
-    dealerMove();
     return;
 }
 
@@ -125,7 +130,8 @@ void dealerMove()
     if (dealerTotal <= 8)
     {
         dealCards(dealer_hand, 1);
-        if(gameOver == true){
+        if (gameOver == true)
+        {
             dealerMove();
         }
     }
