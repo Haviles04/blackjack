@@ -25,6 +25,8 @@ string getCardName(int suit, int rank);
 void initialize();
 void update();
 void printHands();
+void makeDeck();
+void dealCards(vector<card> &hand, int count);
 
 int randomNum(int i)
 {
