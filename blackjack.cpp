@@ -84,7 +84,6 @@ void dealCards(vector<card> &hand, int count)
     return;
 }
 
-
 string getCardName(int suit, int rank)
 {
     string str_suit;
@@ -125,11 +124,12 @@ string getCardName(int suit, int rank)
     return str_rank + str_suit;
 }
 
-void printHands() 
+void printHands()
 {
     cout << "Dealer top card is " << getCardName(dealer_hand[0].suit, dealer_hand[0].rank) << endl;
     cout << "Your hand is " << endl;
-    for (int i = 0; i < player_hand.size(); i++){
+    for (int i = 0; i < player_hand.size(); i++)
+    {
         string end = i != player_hand.size() - 1 ? "," : "\n";
         cout << getCardName(player_hand[i].suit, player_hand[i].rank) << end;
     }
